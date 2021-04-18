@@ -1,6 +1,6 @@
 {
   "name": "@ymo/cli-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "@ymo/cli shared libs",
   "main": "lib/index.js",
   "scripts": {

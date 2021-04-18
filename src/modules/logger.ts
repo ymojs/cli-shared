@@ -1,4 +1,3 @@
-import EventEmitter from 'events';
 import { join } from 'path';
 import { ensureFileSync, appendFileSync } from 'fs-extra';
 import Console from '@ymo/console';
@@ -6,11 +5,10 @@ import formatDate from './formatDate';
 import * as env from './env';
 import * as spinner from './spinner';
 
-class Logger extends EventEmitter {
+class Logger {
   private logFilePath: string
   
   constructor() {
-    super();
     this.logFilePath = join(env.ymojsHome, this._getLogName());
     Console.init({
       env: env.nodeEnv

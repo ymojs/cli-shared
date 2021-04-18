@@ -1,10 +1,20 @@
-# Console
+# @ymo/cli-shared
 
 ### Usage
 ```javascript
-import Console from "@ymo/console";
+import { logger } from "@ymo/cli-shared";
 
-Console.init({
-  env: "development" // development和debug环境会代理console(log, warn, error)，添加颜色和前缀
-})
+logger.spinnerLog("start");
 ```
+
+### Modules
+- env
+  - env.ymojsHome
+  - env.nodeEnv
+- logger
+  - logger.log(logInfo: string)
+  - logger.spinnerLog(text: string)
+  - logger.stopSpiner()
+  - logger.failSpiner(text: string)
+- formatDate(date: Date | string | number, fmt: stringA): string
+- isWindows(): boolean
